@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import "./Template.css";
 import Signup from "./SignupForm";
 import LoginForm from "./LoginForm";
@@ -13,7 +12,11 @@ const Template = ({ title, desc1, desc2, image, formType, setIsLoggedIn }) => {
           <span>{desc1}</span>
           <span>{desc2}</span>
         </p>
-        {formType === "signup" ? <Signup /> : <LoginForm />}
+        {formType === "signup" ? (
+          <Signup />
+        ) : (
+          <LoginForm setIsLoggedIn={setIsLoggedIn} />
+        )}
         <div>
           <span></span>
           <span>OR</span>
