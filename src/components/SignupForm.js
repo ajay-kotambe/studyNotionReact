@@ -2,8 +2,10 @@ import { useState } from "react";
 import "./SignupForm.css";
 import { FaRegEyeSlash, FaEye } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
+const Signup = ({ setIsLoggedIn }) => {
+  const navigate = useNavigate();
   // ! states handled here...
   const [formData, setFormData] = useState({
     firstName: "",
@@ -28,8 +30,16 @@ const Signup = () => {
     event.preventDefault();
     if (formData.createPassword !== formData.confirmPassword) {
       toast.error("Passwords doesn't match..!");
+      return;
     }
-    
+
+    toast.success("Account Created..");
+    const accountData = {
+      ...formData,
+    };
+    console.log(accountData);
+    setIsLoggedIn(true);
+    navigate("/dashboard");
   };
   return (
     <div>
