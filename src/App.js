@@ -7,12 +7,14 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import { useState } from "react";
 
 function App() {
-  const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   return (
     <div className="">
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
