@@ -42,13 +42,16 @@ const Signup = ({ setIsLoggedIn }) => {
     navigate("/dashboard");
   };
   return (
-    <div>
-      <div>
-        <button>Student</button>
-        <button>Instructor</button>
+    <div className="signup-wrap">
+      <div className="role-toggle">
+        <div className="role-toggle-internal">
+          <button className="active">Student</button>
+          <button>Instructor</button>
+        </div>
       </div>
-      <form action="" onSubmit={submitHandler}>
-        <div>
+
+      <form className="signup-form" onSubmit={submitHandler}>
+        <div className="row two">
           <label htmlFor="firstName">
             <p>
               First Name <sup>*</sup>
@@ -63,6 +66,7 @@ const Signup = ({ setIsLoggedIn }) => {
               onChange={changeHandler}
             />
           </label>
+
           <label htmlFor="lastName">
             <p>
               Last Name <sup>*</sup>
@@ -79,7 +83,7 @@ const Signup = ({ setIsLoggedIn }) => {
           </label>
         </div>
 
-        <div>
+        <div className="row one">
           <label htmlFor="email">
             <p>
               Email Address <sup>*</sup>
@@ -96,8 +100,8 @@ const Signup = ({ setIsLoggedIn }) => {
           </label>
         </div>
 
-        <div>
-          <label htmlFor="createPassword">
+        <div className="row two">
+          <label htmlFor="createPassword" className="with-icon">
             <p>
               Create Password <sup>*</sup>
             </p>
@@ -110,11 +114,15 @@ const Signup = ({ setIsLoggedIn }) => {
               id="createPassword"
               onChange={changeHandler}
             />
-            <span onClick={() => setShowCreatePassword((prev) => !prev)}>
+            <span
+              className="pw-toggle"
+              onClick={() => setShowCreatePassword((p) => !p)}
+            >
               {showCreatePassword ? <FaRegEyeSlash /> : <FaEye />}
             </span>
           </label>
-          <label htmlFor="confirmPassword">
+
+          <label htmlFor="confirmPassword" className="with-icon">
             <p>
               Confirm Password <sup>*</sup>
             </p>
@@ -122,16 +130,25 @@ const Signup = ({ setIsLoggedIn }) => {
               type={showConfirmPassword ? "text" : "password"}
               required
               value={formData.confirmPassword}
-              placeholder="Confrim Password"
+              placeholder="Confirm Password"
               name="confirmPassword"
               id="confirmPassword"
               onChange={changeHandler}
             />
-            <span onClick={() => setShowConfirmPassword((prev) => !prev)}>
+            <span
+              className="pw-toggle"
+              onClick={() => setShowConfirmPassword((p) => !p)}
+            >
               {showConfirmPassword ? <FaRegEyeSlash /> : <FaEye />}
             </span>
           </label>
-          <button>Create Account</button>
+        </div>
+
+        {/* moved out so it becomes full-width */}
+        <div className="form-actions">
+          <button type="submit" className="primary">
+            Create Account
+          </button>
         </div>
       </form>
     </div>

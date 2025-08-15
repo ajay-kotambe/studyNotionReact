@@ -1,69 +1,63 @@
 .navbar-div {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: white; /* change as needed */
+  background-color: #0d1117; /* Dark background */
+  padding: 0.3rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-div > div,
-.navbar-div > nav {
-  flex: 1; /* each main section gets equal width */
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between; /* space between links and buttons */
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center; /* center the links horizontally in their section */
-  gap: 20px; /* spacing between links */
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.nav-links a.active {
-  text-decoration: underline; /* highlight active link */
-  color: purple;
-}
-
-.navbar span:last-child {
-  display: flex;
-  justify-content: center; /* center buttons in their section */
-  gap: 10px;
-}
-
-.navbar button {
-  padding: 6px 12px;
-  border: 1px solid black;
-  border-radius: 3px;
-  background: #ffffff;
+/* Logo styling */
+.navbar-div img {
   cursor: pointer;
 }
 
+/* Nav container */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+/* Active NavLink styling */
+.nav-links .active {
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+/* Buttons */
+.navbar button {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 0.4rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
 .navbar button:hover {
-  background: #f0f0f0;
+  background-color: #30363d;
+  border-color: #58a6ff;
+  color: #58a6ff;
 }
-
-/* ? React toast */
-
-/* .my-toast {
-  width: 140px;
-  height: 20px;
-  padding: 1px;
-  border-radius: 8px;
-}
-
-.my-toast-body {
-  font-size: 14px;
-}
-
-.my-toast-progress {
-  background: purple;
-} */

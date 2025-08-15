@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-// import logoLight from "../assets/logo/logoLight.png";
-import logoDark from "../assets/logo/logoDark.png";
+import logoLight from "../assets/logo/logoLight.png";
+// import logoDark from "../assets/logo/logoDark.png";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import toast from "react-hot-toast";
@@ -24,7 +24,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
       <div>
         <Link to="/">
           <img
-            src={logoDark}
+            src={logoLight}
             alt="logo"
             width={160}
             height={32}

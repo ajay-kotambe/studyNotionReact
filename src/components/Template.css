@@ -1,0 +1,112 @@
+/* Page layout */
+
+.auth-template {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 86px 24px;
+  display: grid;
+  grid-template-columns: minmax(320px, 560px) minmax(320px, 560px);
+  gap: 48px;
+  align-items: start;
+  background-color: #1f242b;
+}
+.google-btn {
+  display: flex;
+  align-items: center; /* vertically center icon & text */
+  justify-content: center; /* center the whole content inside the button */
+  gap: 8px; /* space between icon and text */
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 0px 186px;
+}
+
+/* Left column -------------------------------------------------- */
+.auth-title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #e6edf3;
+  margin: 0 22px 12px;
+}
+
+.auth-desc {
+  margin: 0 25px 24px;
+  max-width: 56ch;
+  line-height: 1.6;
+}
+
+.auth-desc .muted {
+  color: #9da7b3;
+}
+.auth-desc .accent {
+  color: #8ab4f8;
+  font-style: italic;
+}
+
+/* Separator */
+.separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+}
+.separator > span:first-child,
+.separator > span:last-child {
+  flex: 1;
+  height: 1px;
+  background: #2b3138;
+}
+.sep-text {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+/* Google button */
+.google-btn {
+  background: #1f242b;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 10px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.google-btn:hover {
+  background: #2a3138;
+  color: #e6edf3;
+  border-color: #58a6ff;
+}
+
+/* Right column (framed image) --------------------------------- */
+.image-wrap {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.main-img {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+.frame-img {
+  position: absolute;
+  inset: 0;
+  transform: translate(22px, 22px); /* offset to show the frame */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .auth-template {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .image-wrap {
+    margin: 0 0 0 auto;
+  }
+}
