@@ -1,0 +1,161 @@
+/* Main container */
+form {
+  background-color: #0d1117;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #c9d1d9;
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.signup-wrap {
+  background-color: #0d1117;
+}
+.role-toggle {
+  background-color: #4da1ff; /* blue background behind buttons */
+  padding: 10px 15px;
+  display: inline-flex;
+  gap: 10px;
+  border-radius: 25px;
+}
+
+.role-toggle button {
+  background-color: #2a2d32; /* dark gray/black button */
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.role-toggle {
+  background-color: #0d1117; /* blue background behind buttons */
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center; /* center buttons horizontally */
+  gap: 10px;
+  border-radius: 25px;
+  margin: 0 auto; /* center the whole container */
+}
+
+.role-toggle button:hover {
+  background-color: #3a3e44; /* slightly lighter on hover */
+}
+
+.role-toggle-internal {
+  background-color: #30363d;
+  border-radius: 50%;
+}
+
+.role-toggle button.active {
+  background-color: #1f2125; /* darker for active state */
+}
+
+/* Top toggle buttons */
+form ~ div > button,
+div > button {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+div > button:first-child {
+  background-color: #30363d;
+}
+
+div > button:hover {
+  border-color: #58a6ff;
+  color: #58a6ff;
+}
+
+/* Label and input layout */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+}
+
+label p {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+label sup {
+  color: #ff7b72;
+  font-size: 0.8rem;
+}
+
+/* Input fields */
+input {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+/* Row layouts */
+form > div:first-child,
+form > div:nth-child(3) {
+  display: flex;
+  gap: 1rem;
+}
+
+form > div:first-child label,
+form > div:nth-child(3) label {
+  flex: 1;
+}
+
+/* Password toggle icons */
+label span {
+  position: relative;
+  left: 190px;
+  top: -18%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #8b949e;
+}
+
+label span:hover {
+  color: #58a6ff;
+}
+
+/* Submit button */
+button[type="submit"],
+form button:last-child {
+  background-color: #facc15;
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover,
+form button:last-child:hover {
+  background-color: #eab308;
+}
+
+/* eye btns */
+
+/* .pw-toggle-icon {
+    position: relative;
+    top: 20px;
+} */

@@ -118,7 +118,11 @@ const Signup = ({ setIsLoggedIn }) => {
               className="pw-toggle"
               onClick={() => setShowCreatePassword((p) => !p)}
             >
-              {showCreatePassword ? <FaRegEyeSlash /> : <FaEye />}
+              {showCreatePassword ? (
+                <FaRegEyeSlash className="pw-toggle-icon" />
+              ) : (
+                <FaEye className="pw-toggle-icon" />
+              )}
             </span>
           </label>
 

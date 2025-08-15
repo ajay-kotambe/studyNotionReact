@@ -123,9 +123,9 @@ form > div:nth-child(3) label {
 
 /* Password toggle icons */
 label span {
-  position: absolute;
-  right: 10px;
-  top: 65%;
+  position: relative;
+  left: 187px;
+  top: -18%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #8b949e;
@@ -154,4 +154,8 @@ form button:last-child:hover {
 }
 
 /* eye btns */
-/* For labels that have an icon */
+
+/* .pw-toggle-icon {
+    position: relative;
+    top: 20px;
+} */
