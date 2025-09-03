@@ -22,6 +22,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
   const clickHandler = () => {
     showPassword ? setShowPassword(false) : setShowPassword(true);
   };
+  
   const submitHandler = (event) => {
     event.preventDefault();
     setIsLoggedIn(true);

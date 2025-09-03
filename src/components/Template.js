@@ -28,7 +28,6 @@ const Template = ({ title, desc1, desc2, image, formType, setIsLoggedIn }) => {
         </div>
 
         <button className="google-btn">
-          {/* optional: add a small Google icon if you have one */}
           <span style={{ padding: "2px 0" }}>
             <FcGoogle />
           </span>

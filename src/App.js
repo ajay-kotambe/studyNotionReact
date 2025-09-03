@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      {/* Routes here...! */}
 
       <Routes>
         <Route path="/" element={<Home />} />
